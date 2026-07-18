@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<head>
+    <title>My Restaurant web page</title>
+    <link rel="stylesheet" href="font.css">
+    <link rel="icon" href="Joy's  Restaurant Logo.png">
+    <style>
+                body{
+            background-color: aquamarine;
+            padding: 10px;
+            margin:10px;
+        }
+        .topnav{
+            background-color: blueviolet;
+            overflow: hidden;
+        }
+        .topnav a{
+            float: left;
+            color: chartreuse;
+            padding: 14px 16px;
+            font-size:17px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .topnav a:hover{
+            background-color:darkgoldenrod;
+            color:red;
+        }
+        .topnav a.active{
+            background-color: purple;
+            color: orange;
+        }
+        .mySlides{
+            width: 100%;
+            height: 650px;
+        }
+        .section{
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 50px;
+        }
+        .section.dark{
+            background-color: #2a435d;
+            color: #fff;
+        }
+        .section.light{
+            background-color: #f4f4f4;
+            color: #282e34;
+        }
+        .pimg3{
+            position:relative;
+            background-image:url(https://images.unsplash.com/photo-1668658355063-45f73fec9f81?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM5MzUzMDN8&ixlib=rb-4.1.0&q=85);
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+        }
+        .ptext{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #cbd10c;
+            font-size: 27px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        @media(max-width:568px){
+        .pimg3{
+            background-attachment: scroll;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class='topnav'>
+            <a href="index.html"><img src="Joy's  Restaurant Logo.png" alt="Logo" style="width: 100px; height: 100px; margin-right: 10px;"></a>
+        <a class="active" href="index.html">Home</a>
+        <a href="gallery.html">Food Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About this Restaurant</a>
+            </div>
+    </nav>
+    <br>
+    <section>
+        <div id="slideshow">
+            <img class='mySlides' src='https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM3OTIyODZ8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+            <img class='mySlides' src='https://images.unsplash.com/photo-1485963631004-f2f00b1d6606?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM3OTIzNTd8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+            <img class='mySlides' src='https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODM3OTIzNTd8&ixlib=rb-4.1.0&q=80&w=400' alt=''>
+            <br>
+            <h1 style="text-align: center; color: rgb(255, 0, 208);">Welcome to My Restaurant</h1>
+            </div>
+            <script>
+                var myIndex = 0;
+                carousel();
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) { myIndex = 1 }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 2000); // Change image every 2 seconds
+                }
+            </script>
+        </div>
+        <br>
+        <section class="section section dark">
+            <h2> Section 1#</h2>
+            <p>This website showcases the best dishes in town (all just for the test) .</p>
+        </section>
+    </section>
+    <br>
+    <section>
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border trans">Enjoy your food.</span>
+        </div>
+    </div>
+    </section>
+     <section>
+    <div class="footer">
+        <p style="text-align: center; color: rgb(255, 0, 208); background-color: #f4f4f4;">Copyright &copy; 2026 My Restaurant. All rights reserved.</p>
+    </div>
+    </section>
+</body>
